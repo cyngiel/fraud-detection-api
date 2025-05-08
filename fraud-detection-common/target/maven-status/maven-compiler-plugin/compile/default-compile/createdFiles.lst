@@ -1,0 +1,7 @@
+com\frauddetection\api\dto\user\UserCredentials.class
+com\frauddetection\api\dto\user\AuthenticatedUser.class
+com\frauddetection\api\dto\BinDetails.class
+com\frauddetection\api\transaction\TransactionParams$TransactionParamsBuilder.class
+com\frauddetection\api\dto\Country.class
+com\frauddetection\api\dto\BinDetails$Country.class
+com\frauddetection\api\transaction\TransactionParams.class

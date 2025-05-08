@@ -1,0 +1,7 @@
+D:\Academy\repo\fraud-detection-api\fraud-detection-api\fraud-detection-risk-score\src\test\java\com\frauddetection\api\rule\definition\AnonymousPrepaidIndicatorRuleTest.java
+D:\Academy\repo\fraud-detection-api\fraud-detection-api\fraud-detection-risk-score\src\test\java\com\frauddetection\api\rule\definition\FlexCardRuleTest.java
+D:\Academy\repo\fraud-detection-api\fraud-detection-api\fraud-detection-risk-score\src\test\java\com\frauddetection\api\rule\definition\HighTransactionAmountRuleTest.java
+D:\Academy\repo\fraud-detection-api\fraud-detection-api\fraud-detection-risk-score\src\test\java\com\frauddetection\api\rule\definition\OutOfOriginCountryRuleTest.java
+D:\Academy\repo\fraud-detection-api\fraud-detection-api\fraud-detection-risk-score\src\test\java\com\frauddetection\api\rule\definition\TransactionFromHighRiskCountryRuleTest.java
+D:\Academy\repo\fraud-detection-api\fraud-detection-api\fraud-detection-risk-score\src\test\java\com\frauddetection\api\rule\helper\RuleSetFactoryTest.java
+D:\Academy\repo\fraud-detection-api\fraud-detection-api\fraud-detection-risk-score\src\test\java\com\frauddetection\api\service\RiskScoreCalculateServiceTest.java

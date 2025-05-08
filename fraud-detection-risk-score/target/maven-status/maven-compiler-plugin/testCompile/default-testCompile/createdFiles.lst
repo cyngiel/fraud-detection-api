@@ -1,0 +1,7 @@
+com\frauddetection\api\rule\definition\HighTransactionAmountRuleTest.class
+com\frauddetection\api\rule\definition\OutOfOriginCountryRuleTest.class
+com\frauddetection\api\rule\helper\RuleSetFactoryTest.class
+com\frauddetection\api\rule\definition\FlexCardRuleTest.class
+com\frauddetection\api\rule\definition\TransactionFromHighRiskCountryRuleTest.class
+com\frauddetection\api\service\RiskScoreCalculateServiceTest.class
+com\frauddetection\api\rule\definition\AnonymousPrepaidIndicatorRuleTest.class

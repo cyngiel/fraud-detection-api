@@ -1,0 +1,36 @@
+risk-score:
+  sets:
+    DEFAULT:
+      rules:
+        - type: high-risk-country
+          name: "High Risk Country"
+          score: 30
+          description: "A transaction performed from a high-risk country"
+        - type: out-of-origin-country
+          name: "Out of Origin Country"
+          score: 20
+          description: "Transaction originating from a country different than the card's registered country"
+        - type: high-transaction-amount
+          name: "High Transaction Amount"
+          score: 5
+          description: "Transaction amount exceeds the defined threshold: "
+          threshold: 1000
+        - type: anonymous-prepaid-indicator
+          name: "Anonymous Prepaid Card"
+          score: 40
+          description: "Transaction with anonymous prepaid card"
+        - type: flex-card-indicator
+          name: "Flex Card"
+          score: 30
+          description: "Transaction with a flex card"
+    WITHOUT_BIN_DETAILS:
+      rules:
+        - type: high-risk-country
+          name: "High Risk Country"
+          score: 30
+          description: "A transaction performed from a high-risk country"
+        - type: high-transaction-amount
+          name: "High Transaction Amount"
+          score: 20
+          description: "Transaction amount exceeds the defined threshold: "
+          threshold: 2000.0
