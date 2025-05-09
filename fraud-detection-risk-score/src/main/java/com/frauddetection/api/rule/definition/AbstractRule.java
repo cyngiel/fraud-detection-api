@@ -9,6 +9,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * Abstract class representing a risk rule.
+ * This class implements the RiskRule interface and provides common properties and methods for all rules.
+ */
 @Getter
 @AllArgsConstructor
 @ToString
@@ -33,6 +37,13 @@ public abstract class AbstractRule implements RiskRule, ReportEntry {
         return ruleDescription;
     }
 
+    /**
+     * Retrieves the BinDetails from the TransactionParams.
+     *
+     * @param transactionParams The transaction parameters containing BinDetails.
+     * @return The BinDetails object.
+     * @throws RuleEvaluationException If BinDetails are not available.
+     */
     BinDetails getBinDetails(TransactionParams transactionParams) throws RuleEvaluationException {
         return transactionParams.getBinDetails()
                 .orElseThrow(() -> new RuleEvaluationException("Bin details are not available for the transaction"));

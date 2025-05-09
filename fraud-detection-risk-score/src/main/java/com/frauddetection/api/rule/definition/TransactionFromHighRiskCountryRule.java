@@ -15,7 +15,7 @@ public class TransactionFromHighRiskCountryRule extends AbstractRule {
 
     @Override
     public boolean evaluate(TransactionParams transactionParams) {
-        return isHighRiskCountry(transactionParams.getCountryCode()) ;
+        return isHighRiskCountry(transactionParams.getCountryCode());
     }
 
     private boolean isHighRiskCountry(String countryCode) {

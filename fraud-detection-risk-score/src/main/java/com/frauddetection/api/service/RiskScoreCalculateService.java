@@ -23,6 +23,20 @@ import java.util.concurrent.ExecutionException;
 public class RiskScoreCalculateService {
 
 
+    /**
+     * Calculates the risk score for a given set of rules and transaction parameters.
+     *
+     * <p>
+     * This method executes the provided rules against the specified transaction parameters
+     * and generates a {@link RiskScoreReport} that contains the results of the evaluation.
+     * </p>
+     *
+     * @param rules             The set of rules to evaluate
+     * @param transactionParams The transaction parameters to evaluate against the rules
+     * @return A {@link RiskScoreReport} containing the results of the evaluation
+     * @throws ExecutionException   If an error occurs during rule execution
+     * @throws InterruptedException If the execution is interrupted
+     */
     public RiskScoreReport calculate(Set<RiskRule> rules, TransactionParams transactionParams) throws ExecutionException, InterruptedException {
         RiskScoreReport report = new RiskScoreReport();
         if (rules == null || rules.isEmpty()) {

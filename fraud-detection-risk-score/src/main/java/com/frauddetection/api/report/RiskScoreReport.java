@@ -14,7 +14,11 @@ import static com.frauddetection.api.report.RiskFlag.HIGH_RISK;
 import static com.frauddetection.api.report.RiskFlag.SAFE;
 import static com.frauddetection.api.report.RiskFlag.WARNING;
 
-
+/**
+ * RiskScoreReport is a class that represents the report generated after evaluating a set of risk rules.
+ * It contains information about the total number of rules, the total risk score, the risk flag,
+ * and any rules that encountered errors during evaluation.
+ */
 @Getter
 @ToString
 public class RiskScoreReport {

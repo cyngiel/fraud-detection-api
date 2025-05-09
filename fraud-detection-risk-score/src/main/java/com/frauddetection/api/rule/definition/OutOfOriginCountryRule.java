@@ -1,6 +1,5 @@
 package com.frauddetection.api.rule.definition;
 
-import com.frauddetection.api.dto.BinDetails;
 import com.frauddetection.api.rule.RuleEvaluationException;
 import com.frauddetection.api.transaction.TransactionParams;
 import lombok.ToString;

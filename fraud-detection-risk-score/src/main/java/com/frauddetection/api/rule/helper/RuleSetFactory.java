@@ -1,12 +1,12 @@
 package com.frauddetection.api.rule.helper;
 
-import com.frauddetection.api.rule.definition.FlexCardRule;
-import com.frauddetection.api.strategy.config.RiskScoreStrategyConfig;
 import com.frauddetection.api.rule.RiskRule;
 import com.frauddetection.api.rule.definition.AnonymousPrepaidIndicatorRule;
+import com.frauddetection.api.rule.definition.FlexCardRule;
 import com.frauddetection.api.rule.definition.HighTransactionAmountRule;
 import com.frauddetection.api.rule.definition.OutOfOriginCountryRule;
 import com.frauddetection.api.rule.definition.TransactionFromHighRiskCountryRule;
+import com.frauddetection.api.strategy.config.RiskScoreStrategyConfig;
 import io.quarkus.cache.CacheResult;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -22,6 +22,13 @@ public class RuleSetFactory {
     @Inject
     RiskScoreStrategyConfig riskScoreStrategyConfig;
 
+    /**
+     * Retrieves a set of rules based on the provided rule set name.
+     *
+     * @param ruleSetName the name of the rule set to retrieve
+     * @return a set of {@link RiskRule} objects corresponding to the specified rule set
+     * @throws IllegalArgumentException if the rule set name is unknown
+     */
     @CacheResult(cacheName = "ruleSetCache")
     public Set<RiskRule> getRuleSet(String ruleSetName) {
         RiskScoreStrategyConfig.StrategyConfig ruleSet = riskScoreStrategyConfig.sets().get(ruleSetName);

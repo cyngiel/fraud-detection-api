@@ -13,6 +13,14 @@ import org.jboss.logging.Logger;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Handles the risk score calculation request.
+ *
+ * <p>
+ * This class is responsible for processing the risk score request, executing the risk score calculation,
+ * and building the response based on the result of the calculation.
+ * </p>
+ */
 @ApplicationScoped
 public class RiskScoreRequestHandler {
 
@@ -21,7 +29,12 @@ public class RiskScoreRequestHandler {
     @Inject
     RiskScoreService riskScoreService;
 
-
+    /**
+     * Handles the risk score request.
+     *
+     * @param request the risk score request
+     * @return the response builder with the result of the calculation
+     */
     public Response.ResponseBuilder handle(RiskScoreRequest request) {
         Response.ResponseBuilder response;
 
@@ -36,7 +49,7 @@ public class RiskScoreRequestHandler {
         return response;
     }
 
-    private static TransactionParams getTransactionParams(RiskScoreRequest request) {
+    private TransactionParams getTransactionParams(RiskScoreRequest request) {
         return TransactionParams.builder()
                 .bin(request.getBin())
                 .countryCode(request.getCountryCode())

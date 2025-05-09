@@ -1,13 +1,12 @@
 package com.frauddetection.api.rule.definition;
 
 
-import com.frauddetection.api.dto.BinDetails;
 import com.frauddetection.api.rule.RuleEvaluationException;
 import com.frauddetection.api.transaction.TransactionParams;
 import lombok.ToString;
 
 @ToString(callSuper = true)
-public class AnonymousPrepaidIndicatorRule extends AbstractRule{
+public class AnonymousPrepaidIndicatorRule extends AbstractRule {
 
     public AnonymousPrepaidIndicatorRule(int score, String ruleName, String ruleDescription) {
         super(score, ruleName, ruleDescription);

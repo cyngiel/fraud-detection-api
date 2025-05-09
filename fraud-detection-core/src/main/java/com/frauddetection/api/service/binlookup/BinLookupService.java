@@ -33,18 +33,18 @@ public class BinLookupService {
     @Inject
     MCSigner signer;
 
+    /**
+     * Fetches BIN details for a given BIN number. Calls Mastercard Bin Lookup API and caches the result.
+     *
+     * @param binNumber the BIN number to look up
+     * @return an Optional containing the BinDetails
+     * @throws IOException if an error occurs while fetching the BIN details
+     * @see BinDetails
+     */
     @CacheResult(cacheName = "bin-details-cache")
     public Optional<BinDetails> getBinDetails(int binNumber) throws IOException {
         LOGGER.debugf("Fetching bin details for bin: %s", binNumber);
         return fetchBinDetails(binNumber);
-    }
-
-    private BinDetails fetchMock(int binNumber) { //todo do wywaleinia?
-        BinDetails binDetails = new BinDetails();
-        binDetails.setBinNum(String.valueOf(binNumber));
-        binDetails.setCountry(new BinDetails.Country());
-        binDetails.getCountry().setAlpha3("USA");
-        return binDetails;
     }
 
     private Optional<BinDetails> fetchBinDetails(int binNumber) throws IOException {

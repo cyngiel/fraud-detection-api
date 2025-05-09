@@ -2,8 +2,8 @@ package com.frauddetection.api.service.security;
 
 import com.frauddetection.api.dto.user.AuthenticatedUser;
 import com.frauddetection.api.dto.user.UserCredentials;
-import com.frauddetection.api.repository.entity.User;
 import com.frauddetection.api.repository.UserRepository;
+import com.frauddetection.api.repository.entity.User;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import org.jboss.logging.Logger;
@@ -11,6 +11,14 @@ import org.jboss.logging.Logger;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * Service for handling user authentication.
+ *
+ * <p>
+ * This service is responsible for authenticating users based on their credentials and generating
+ * JWT tokens for authenticated users.
+ * </p>
+ */
 @ApplicationScoped
 public class AuthenticationService {
 

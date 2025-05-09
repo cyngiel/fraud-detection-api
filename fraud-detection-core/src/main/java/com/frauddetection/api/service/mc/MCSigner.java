@@ -15,6 +15,10 @@ import java.security.PrivateKey;
 import java.security.UnrecoverableKeyException;
 import java.security.cert.CertificateException;
 
+/**
+ * This class is responsible for signing requests to the MasterCard API.
+ * It uses the OkHttpSigner from the MasterCard SDK to sign requests with a private key.
+ */
 @Data
 @ApplicationScoped
 public class MCSigner {

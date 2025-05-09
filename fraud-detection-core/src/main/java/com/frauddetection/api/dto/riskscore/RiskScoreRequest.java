@@ -7,7 +7,7 @@ import lombok.Data;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
 @Data
-public class RiskScoreRequest { //TODO nie dziala validacja
+public class RiskScoreRequest {
     @Min(value = 100000, message = "BIN must have at least 6 digits")
     @Max(value = 99999999, message = "BIN must have at most 8 digits")
     @Schema(description = "Single 6-8 digits BIN", example = "99630215")
